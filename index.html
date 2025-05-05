@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battaglia Navale</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Battaglia Navale</h1>
+
+        <!-- Fase posizionamento Giocatore 1 -->
+        <div id="fase-posiziona-g1" class="fase">
+            <h2>Giocatore 1 - Posiziona le tue 7 navi</h2>
+            <div id="griglia-g1" class="griglia"></div>
+            <button id="passa-g2" style="display: none;">Passa a Giocatore 2</button>
+        </div>
+
+        <!-- Fase posizionamento Giocatore 2 -->
+        <div id="fase-posiziona-g2" class="fase" style="display: none;">
+            <h2>Giocatore 2 - Posiziona le tue 7 navi</h2>
+            <div id="griglia-g2" class="griglia"></div>
+            <button id="inizia-battaglia" style="display: none;">Inizia la battaglia</button>
+        </div>
+
+        <!-- Fase attacco -->
+        <div id="fase-attacco" class="fase" style="display: none;">
+            <h2 id="turno-attacco">Giocatore 1, Attacca!</h2>
+            <div id="griglia-attacco" class="griglia"></div>
+            <button id="passa-turno" style="display: none;">Passa il turno</button>
+        </div>
+
+        <!-- Messaggio di vittoria -->
+        <div id="vittoria" style="display: none;">
+            <h2>Giocatore <span id="vincitore"></span> ha vinto!</h2>
+            <button onclick="resetGame()">Gioca di nuovo</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
